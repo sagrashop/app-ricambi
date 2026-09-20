@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'ricambi_data.dart';
+import 'modulo_ordine_screen.dart';
 
 class DettaglioProdottoScreen extends StatelessWidget {
   final Ricambio ricambio;
@@ -141,11 +142,12 @@ class DettaglioProdottoScreen extends StatelessWidget {
                   ),
                 ),
                 onPressed: () {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
-                      content: Text(
-                        "Richiesta inviata per: ${ricambio.titolo}",
-                      ),
+                  // Apre la schermata del modulo passando lo SKU del prodotto
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          ModuloOrdineScreen(skuProdotto: ricambio.sku),
                     ),
                   );
                 },

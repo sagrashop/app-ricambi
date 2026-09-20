@@ -26,14 +26,14 @@ class Ricambio {
 final List<Ricambio> catalogoRicambi = [
   Ricambio(
     id: "1",
-    titolo: "MANICO MANIGLIA CASSETTO DETERSIVO LAVATRICE ARISTON HOTPOINT WHIRLPOOL",
-    codice: "c00309597",
+    titolo: "KIT SPAZZOLA la pulizia della Canna Fumaria Stufe a Pellet 3 mt.",
+    codice: "14805005",
     sku: "MAG-SKU-001",
-    prezzo: 24.90,
-    descrizioneCorta: "Pompa di scarico per lavatrice",
-    descrizioneLunga: "Compatibile con vari modelli, ottima qualità.",
-    categoria: "Lavatrice",
-    immagineUrl: "assets/bunner1.jpeg",
+    prezzo: 23.90,
+    descrizioneCorta: "Per stufe a pellet",
+    descrizioneLunga: "Kit per la pulizia della canna fumaria della stufa, delle tubazioni fluviali e canalizzazioni. Composto da asta flessibile, manopola in plastica e scovolo in Nylon da 80mm.",
+    categoria: "Stufe a Pellet",
+    immagineUrl: "assets/14805005.jpg",
   ),
 
   Ricambio(

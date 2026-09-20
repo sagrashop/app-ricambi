@@ -26,7 +26,7 @@ class Ricambio {
 final List<Ricambio> catalogoRicambi = [
   Ricambio(
     id: "1",
-    titolo: "Pompa di scarico universale",
+    titolo: "MANICO MANIGLIA CASSETTO DETERSIVO LAVATRICE ARISTON HOTPOINT WHIRLPOOL",
     codice: "c00309597",
     sku: "MAG-SKU-001",
     prezzo: 24.90,

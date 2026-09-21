@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'categoria_screen.dart';
 import 'ricambi_data.dart';
 import 'dettaglio_prodotto_screen.dart';
+import 'termini_screen.dart';
+import 'privacy_screen.dart';
 
 import 'package:url_launcher/url_launcher.dart';
 
@@ -427,6 +429,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           borderRadius: BorderRadius.circular(8),
                         ),
                       ),
+
                       onPressed: _isLoading ? null : _verificaDisponibilita,
                       child: _isLoading
                           ? const CircularProgressIndicator(color: Colors.white)
@@ -440,7 +443,9 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                     ),
                   ),
+
                   const SizedBox(height: 25),
+
                   const Text(
                     'Risultati Ricerca:',
                     style: TextStyle(
@@ -490,6 +495,52 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                   const SizedBox(height: 15),
+                  // Aggiungi questo blocco dove preferisci sotto il pulsante di verifica o di contatto
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 16.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const TerminiScreen(),
+                              ),
+                            );
+                          },
+                          child: const Text(
+                            'Termini e Condizioni',
+                            style: TextStyle(
+                              color: Color(0xFF1B365D),
+                              fontSize: 13,
+                              decoration: TextDecoration.underline,
+                            ),
+                          ),
+                        ),
+                        const Text(' | ', style: TextStyle(color: Colors.grey)),
+                        TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const PrivacyScreen(),
+                              ),
+                            );
+                          },
+                          child: const Text(
+                            'Privacy Policy',
+                            style: TextStyle(
+                              color: Color(0xFF1B365D),
+                              fontSize: 13,
+                              decoration: TextDecoration.underline,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
 
                   // AREE RISULTATI IN BASE ALLE REGOLE IMPOSTATE
                   if (_messaggioErrore.isNotEmpty) ...[
